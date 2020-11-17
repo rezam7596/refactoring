@@ -1,3 +1,6 @@
 # Refactoring
-Martin Fowler
-code examples
+
+### code examples
+
+by Martin Fowler, with Kent Beck  
+2018
