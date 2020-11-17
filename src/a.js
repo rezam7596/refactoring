@@ -1,7 +1,9 @@
+// a. The Starting Point
+
 const plays = {
   hamlet: { name: "Hamlet", type: "tragedy" },
   aslike: { name: "As You Like It", type: "comedy" },
-  othello: { name: "Othello", type: "tragedy" }
+  othello: { name: "Othello", type: "tragedy" },
 };
 
 const invoices = [
@@ -10,18 +12,18 @@ const invoices = [
     performances: [
       {
         playID: "hamlet",
-        audience: 55
+        audience: 55,
       },
       {
         playID: "aslike",
-        audience: 35
+        audience: 35,
       },
       {
         playID: "othello",
-        audience: 40
-      }
-    ]
-  }
+        audience: 40,
+      },
+    ],
+  },
 ];
 
 function statement(invoice, plays) {
@@ -31,7 +33,7 @@ function statement(invoice, plays) {
   const format = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    minimumFractionDigits: 2
+    minimumFractionDigits: 2,
   }).format;
   for (let perf of invoice.performances) {
     const play = plays[perf.playID];
@@ -61,9 +63,7 @@ function statement(invoice, plays) {
     if ("comedy" === play.type) volumeCredits += Math.floor(perf.audience / 5);
 
     // print line for this order
-    result += `    ${play.name}: ${format(thisAmount / 100)} (${
-      perf.audience
-    } seats)\n`;
+    result += `    ${play.name}: ${format(thisAmount / 100)} (${perf.audience} seats)\n`;
     totalAmount += thisAmount;
   }
   result += `Amount owed is ${format(totalAmount / 100)}\n`;
