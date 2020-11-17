@@ -1,2 +1,3 @@
-# refactoring
-Created with CodeSandbox
+# Refactoring
+Martin Fowler
+code examples

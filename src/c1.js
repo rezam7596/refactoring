@@ -52,7 +52,7 @@ function statement(invoice, plays) {
   result += `You earned ${volumeCredits} credits\n`;
   return result;
 
-  // REFACTOR: Replace Temp with Query
+  // REFACTOR: Replace Temp with Query (Extract Function + Inline Variable)
   function playFor(aPerformance) {
     return plays[aPerformance.playID];
   }
